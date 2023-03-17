@@ -24,22 +24,6 @@ const App = () => {
 
   useEffect(() => {}, []);
 
-  // let resultCartComponent = resultCard.map((item, i) => {
-  //   <ul>
-  //     <li>
-  //       <div>
-  //       <span className="text-lg">Question</span>: {item.question}
-  //       </div>
-  //     <div>
-  //       <span className="text-xl">Your Answer:</span>{item.studentAnswer}
-  //     </div>
-  //     <div>
-  //       <span className="text-xl">Suggestions:</span>{item.suggetion}
-  //     </div>
-  //     </li>
-  //   </ul>
-  // })
-  
  const handleSubmit = async (e) => {
    e.preventDefault();
   setIsLoading(true);
@@ -119,10 +103,11 @@ const App = () => {
     );
   }else{
     return (
-      <div className="container m-auto tracking-wide">
+      <div className="container m-auto tracking-wide ">
         <div className="bg-green-500  p-3 text-center rounded-lg mt-3">
           Result
         </div>
+        <div>
         {resultCard.map((item, i) => (
           <ul key={i}>
             <li>
@@ -139,6 +124,11 @@ const App = () => {
             </li>
           </ul>
         ))}
+        </div>
+        <div className="mt-4">
+        <a href="/" class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded ">Back</a>
+        </div>
+        
       </div>
     );
   }

@@ -32,7 +32,7 @@ app.post("/openai", async (req, res) => {
       you asked the question, ${question}
       student answer is ${studentAnswer} and
       correct answer is ${correctAnswer},
-      compare student answert and correct answer and provide suggestions for the student`,
+      compare student answert and correct answer and provide suggestions for the student, what he should do to answer this question.`,
       max_tokens: 1000,
       temperature: 0,
     });
